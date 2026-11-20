@@ -1,36 +1,66 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Confirmação da compra simulada da Loja Escola.">
-  <title>Loja Escola | Compra concluída</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="Confira a confirmação e o resumo do seu pedido simulado na FormiFofo.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="FormiFofo">
+  <meta property="og:title" content="Pedido confirmado | FormiFofo">
+  <meta property="og:description" content="Seu pedido imaginário já está a caminho do formigueiro.">
+  <title>Pedido confirmado | FormiFofo</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/store.js" defer></script>
+  <script src="js/success.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
   <header class="site-header">
-    <nav class="navbar" aria-label="Navegação principal">
-      <div class="container"><a class="navbar-brand fw-bold" href="index.html">Loja Escola</a></div>
+    <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand brand-lockup" href="index.html" aria-label="FormiFofo, página inicial"><img src="assets/formifofo-selo.svg" width="44" height="44" alt=""><span>FormiFofo</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="index.html#colecao">Voltar à coleção</a></li>
+            <li class="nav-item"><a class="nav-link cart-link" href="checkout.html" aria-label="Carrinho, 0 itens">Carrinho <span class="cart-count" data-cart-count aria-hidden="true">0</span></a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main id="conteudo" class="container py-5">
-    <section class="success-panel mx-auto text-center" aria-labelledby="titulo-sucesso">
+  <main id="conteudo" tabindex="-1" class="container page-section">
+    <section class="success-panel mx-auto" id="pedidoConcluido" hidden aria-labelledby="tituloSucesso">
       <div class="success-icon" aria-hidden="true">✓</div>
-      <p class="eyebrow">Pedido simulado concluído</p>
-      <h1 id="titulo-sucesso">Compra concluída com sucesso!</h1>
-      <p class="lead" id="mensagemCliente">Seus dados foram validados e o fluxo educacional chegou ao final.</p>
+      <p class="eyebrow">Pedido registrado no formigueiro</p>
+      <h1 id="tituloSucesso">Compra concluída com sucesso!</h1>
+      <p class="lead" id="mensagemCliente"></p>
       <dl class="order-data">
-        <div><dt>Número do pedido</dt><dd id="numeroPedido">PED-000000</dd></div>
+        <div><dt>Número do pedido</dt><dd id="numeroPedido"></dd></div>
         <div><dt>Status</dt><dd>Simulação concluída</dd></div>
       </dl>
-      <a class="btn btn-dark" href="index.html">Voltar para a loja</a>
+      <section class="order-summary" aria-labelledby="tituloItensPedido">
+        <h2 id="tituloItensPedido" class="h4">Sua encomenda</h2>
+        <ul class="cart-items" id="itensPedido"></ul>
+        <dl class="totals-list">
+          <div><dt>Subtotal</dt><dd id="subtotalPedido"></dd></div>
+          <div><dt>Trilha de entrega</dt><dd id="fretePedido"></dd></div>
+          <div class="total-line"><dt>Total</dt><dd id="totalPedido"></dd></div>
+        </dl>
+      </section>
+      <a class="btn btn-primary btn-lg mt-4" href="index.html">Voltar para a coleção</a>
+      <p class="small text-secondary mt-3 mb-0">Nenhuma cobrança real foi realizada.</p>
     </section>
+    <noscript><p class="alert alert-warning">Ative o JavaScript para exibir a confirmação do pedido.</p></noscript>
   </main>
 
-  <footer class="site-footer py-4"><div class="container"><p class="mb-0">Loja Escola · Nenhuma cobrança real foi realizada.</p></div></footer>
-  <script src="js/success.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-content"><a class="footer-brand" href="index.html">FormiFofo</a><p>Pequenos passos. Grande conforto.</p><p class="footer-note">Loja fictícia para uma experiência de compra educativa. Nenhuma cobrança real é feita.</p></div>
+  </footer>
 </body>
 </html>

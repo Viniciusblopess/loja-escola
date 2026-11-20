@@ -1,0 +1,10 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Selo FormiFofo">
+  <circle cx="32" cy="32" r="30" fill="#f5e6ca"/>
+  <path d="M8 43c13-10 35-10 48 0-10 11-37 13-48 0Z" fill="#8fbf66"/>
+  <path d="M16 42c8-4 24-4 32 0" fill="none" stroke="#4b823f" stroke-linecap="round" stroke-width="2"/>
+  <g fill="#6d4c41" stroke="#fffdf8" stroke-linecap="round" stroke-width="2.5">
+    <circle cx="24" cy="30" r="6"/><circle cx="36" cy="30" r="5"/><circle cx="47" cy="30" r="4"/>
+    <path d="m23 24-3-6m5 6 4-6m-3 16-7 6m10-4-1 8m8-10 6 6m-2-9 9-3m-3-2 5-6" fill="none"/>
+  </g>
+  <circle cx="13" cy="19" r="2" fill="#e8a33c"/><circle cx="51" cy="14" r="2.5" fill="#e8a33c"/>
+</svg>
